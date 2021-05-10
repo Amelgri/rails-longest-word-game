@@ -1,0 +1,9 @@
+<p><%= @grid %></p>
+
+
+<form action="/score" method ="POST">
+  <input type="text" name="answer">
+  <input class = "bouton" type="submit" value="Ask!">
+  <%= hidden_field_tag :grid, @grid %>
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+</form>
